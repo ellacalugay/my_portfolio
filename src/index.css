@@ -1,0 +1,55 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body {
+    background-color: #050505;
+    color: #e2e1eb;
+    cursor: none;
+}
+
+.glass-panel {
+    background: rgba(20, 20, 20, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 45, 149, 0.1);
+    transition: all 0.3s ease;
+}
+
+.glass-panel:hover {
+    border-color: #ff479b;
+    box-shadow: 0 0 30px rgba(255, 45, 149, 0.15);
+}
+
+.neon-border {
+    position: relative;
+}
+
+.neon-border::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 1px solid transparent;
+    border-image: linear-gradient(to bottom right, #ff479b, transparent) 1;
+    pointer-events: none;
+}
+
+.custom-cursor {
+    width: 12px;
+    height: 12px;
+    background: #ff479b;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    box-shadow: 0 0 15px #ff479b;
+}
+
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 2px;
+    background: #ff479b;
+    z-index: 1000;
+    width: 0%;
+}
