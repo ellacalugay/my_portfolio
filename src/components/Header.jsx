@@ -34,9 +34,12 @@ export default function Header() {
           <a href="#expertise" className="font-body-lg text-body-lg text-on-surface-variant hover:text-primary transition-colors">Expertise</a>
           <a href="#experience" className="font-body-lg text-body-lg text-on-surface-variant hover:text-primary transition-colors">Experience</a>
           <a href="#contact" className="font-body-lg text-body-lg text-on-surface-variant hover:text-primary transition-colors">Contact</a>
-          <button className="px-6 py-2 border border-primary text-primary font-label-caps text-label-caps hover:bg-primary/10 transition-all">
-            Resume
-          </button>
+        <button
+          onClick={() => window.open('/resume.pdf', '_blank')}
+          className="px-6 py-2 border border-primary text-primary font-label-caps text-label-caps hover:bg-primary/10 transition-all"
+        >
+          Resume
+        </button>
         </div>
       )}
     </header>

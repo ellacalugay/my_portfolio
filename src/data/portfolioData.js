@@ -86,14 +86,10 @@ export const portfolioData = {
       description: "Designing immersive user interfaces that prioritize human-centered interaction and cinematic aesthetic flow."
     }
   ],
-  testimonial: {
-    quote: "Ella's attention to detail and ability to translate complex requirements into elegant digital solutions is truly exceptional.",
-    author: "CEO, 8BOX SOLUTIONS"
-  },
   socials: [
-    { name: "LinkedIn", href: "#" },
-    { name: "GitHub", href: "#" },
-    { name: "Twitter", href: "#" },
-    { name: "Email", href: "#" }
+    { name: "LinkedIn", href: "https://www.linkedin.com/in/calugay-ella-lureen-c-594b31319/" },
+    { name: "GitHub", href: "https://github.com/ellacalugay" },
+    { name: "Facebook", href: "https://www.facebook.com/ellaa.calugay" },
+    { name: "Email", href: "mailto:ellacalugay@gmail.com" }
   ]
 };
