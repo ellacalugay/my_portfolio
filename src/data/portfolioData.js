@@ -1,3 +1,5 @@
+import idPic from '../assets/id.jpg';
+
 export const portfolioData = {
   personal: {
     name: "Ella Lureen",
@@ -8,20 +10,21 @@ export const portfolioData = {
     hero: {
       subtitle: "AVAILABLE FOR HIRE",
       mainText: "Software Developer & UI Designer",
-      imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuCjW3B_JY-hq-7sjaocnQLEo2Fum7Mx4BaUKjrp-DS31I86MMAlPUlUSrgACpqXa9R9uUcTEF_p3szuatRTwCBDXyuZHP6UrVY0VdUEJF5LXKLEU6GfYUIixkwmkI-7WDfPHYgrzVV58QrzAFSyBMJWH-ouXoZN1InQxOSiCUeZccykCEIT9w0ZHcqjdhrE23TxcU4-YocqLp6S_eNkN7BGI7nE2GH_yEJlDvafEUb6zvW0Q8wqehaEmj0Rhwy_BgEWyQ02fkSepxY",
+      imageUrl: idPic,
       imageAlt: "A sophisticated professional portrait of a woman in her mid-20s, with a soft focus background of a high-tech laboratory environment. She has a confident yet approachable expression. The lighting is cinematic with subtle neon pink rim highlights that match the futuristic portfolio aesthetic. The overall image has a clean, high-end editorial feel with deep contrast and rich black tones."
     }
   },
   about: {
     sectionLabel: "ABOUT ME",
-    title: "Engineering Meets Creativity.",
+    title: "Designing,Developing, Delivering",
     paragraphs: [
-      "I am a Computer Engineering graduate from the Polytechnic University of the Philippines. My journey in technology is driven by a fascination with how hardware and software converge to create seamless user experiences.",
-      "Specializing in front-end development and WordPress architecture, I focus on building digital products that are not only functional but also visually arresting. I believe that performance and beauty should never be a trade-off."
+      "I am a Bachelor of Science in Computer Engineering graduate from the Polytechnic University of the Philippines (PUP), specializing in Software Development. Passionate about technology and design, I enjoy building digital experiences that are both visually appealing and highly functional.",
+      "My interests include front-end development, UI/UX design, and web development, where I focus on creating responsive, user-centered solutions. By combining technical expertise with creative problem-solving, I strive to develop products that deliver seamless experiences while maintaining strong performance and usability.",
+      "I am eager to contribute my skills and creativity to innovative projects that push the boundaries of technology and design."
     ],
     stats: [
-      { number: "4+", label: "Years Dev Experience" },
-      { number: "20+", label: "Projects Delivered" }
+      { number: "1", label: "Year Dev Experience" },
+      { number: "10+", label: "Projects Delivered" }
     ]
   },
   experience: [
@@ -40,26 +43,33 @@ export const portfolioData = {
   ],
   projects: [
     {
-      tag: "REACT NATIVE",
+      tag: "WEB DEVELOPER",
       title: "HikeSafe",
       description: "Emergency mountain safety & navigation.",
       imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuD1Z2t2_5vLPGCw7dyS4qdkGs1fXVDZjiB8JnNScToWZHLnAQGOQ5sal7zCb6JFANb3jftLJ0_fELys5onSaHlHG3ztZDvpItmZ8xU73WLcWjt9R3IS879Np8YPXS38OCz81h4l8M-d8caZ7NBhnvi9pUPclOOprl8NR3-i4Vue0d3QUZj9ohporYl9XlmJRofQqnWgQRlKUmdTb_-roArmdZo5yoYDnm3ADCpEOXM3scpsLdzsqZLtTFKbQ60tGjUgh_QcxR63_I4",
       imageAlt: "A professional mobile application interface for a hiking safety app called HikeSafe, displayed on a high-end smartphone mockup. The screen features a detailed topographic map, real-time altitude data, and emergency SOS buttons in vibrant neon accents. The setting is a dark, moody studio with soft pink ambient lighting reflecting off the glass screen."
     },
     {
-      tag: "FULL STACK",
+      tag: "WEB DEVELOPER",
       title: "GoEquip",
       description: "Premium equipment rental & tracking ecosystem.",
       imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuBWp-L0tlWd3tCfx0gMZqvXfiBcuHjwRh7yhOo05EX2GYa0JEegaURNU3KkUPbmKJylGB1kpnVGtFzeztV2k45fdD1N-6VyZSihxFVe-OK1JBgl9ccUoCpXIj_eE_HiNOxljYpeT83ZtQvE4p_WKveCaKuLD53IfD2rRzYJtyKCWPpoAf6q5vloQ9QuZSAbmNb14uJbjdbl6ExfLsuAM-uAPohDJnb3dJubekwcdlyHnnd_vQhrpAGt5osjae9pOk_1DdAuJn5tbSM",
       imageAlt: "A desktop dashboard view of a high-end equipment rental platform called GoEquip. The UI is minimalist and dark-themed, showcasing professional camera gear and heavy machinery with clean typography and glassmorphic cards. The scene is illuminated by a subtle pink glow from behind the screen, highlighting the premium software engineering quality."
     },
     {
-      tag: "UI/UX DESIGN",
+      tag: "WEB DEVELOPER",
+      title: "BuildCredit",
+      description: "Personalized credit management solution.", 
+      imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuAUWb3MNCNuMAjxDi1DD7fCfLzpXGrcP1USbjX8fzIFQ9UtFdHOXSXP6oNfRqu6LGIrCqqtAFjoSvBFlejRj48e0dswsFRvZtNXE-lWr9g_z0sY-4EOK9nBAwTtPtaEmOnuUkqzikiTt-0EWXctjLFk-mFNri5ogqdRxHD3UimBg70SavfFaPzVQe3RT68Xe-jCLzzfXfXHWqlz8EW34817l7B0xORNVw8X6kamYdI3rrcUoS0HmSTDyBMFynBndozqDj3wpxztjtf0",
+      imageAlt: "A sleek fintech application interface titled BuildCredit, shown on a tablet device. The interface displays credit score analytics, financial progress charts in neon pink gradients, and personalized credit building tips. The lighting is sophisticated, creating a sense of trust and technological advancement within a dark workspace aesthetic."
+    },
+    {
+      tag: "WEB DEVELOPER",
       title: "BuildCredit",
       description: "Personalized credit management solution.",
       imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuAUWb3MNCNuMAjxDi1DD7fCfLzpXGrcP1USbjX8fzIFQ9UtFdHOXSXP6oNfRqu6LGIrCqqtAFjoSvBFlejRj48e0dswsFRvZtNXE-lWr9g_z0sY-4EOK9nBAwTtPtaEmOnuUkqzikiTt-0EWXctjLFk-mFNri5ogqdRxHD3UimBg70SavfFaPzVQe3RT68Xe-jCLzzfXfXHWqlz8EW34817l7B0xORNVw8X6kamYdI3rrcUoS0HmSTDyBMFynBndozqDj3wpxztjtf0",
       imageAlt: "A sleek fintech application interface titled BuildCredit, shown on a tablet device. The interface displays credit score analytics, financial progress charts in neon pink gradients, and personalized credit building tips. The lighting is sophisticated, creating a sense of trust and technological advancement within a dark workspace aesthetic."
-    }
+    },    
   ],
   skills: [
     { icon: "code", name: "JavaScript / PHP" },

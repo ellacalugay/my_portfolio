@@ -9,6 +9,7 @@ import Skills from './components/Skills';
 import Services from './components/Services';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import bgImage from './assets/image.png';
 
 function HomePage() {
   return (
@@ -53,7 +54,21 @@ export default function App() {
 
   return (
     <Router>
-      <div className="dark bg-background text-on-surface font-body-md overflow-x-hidden">
+      <div className="dark bg-background text-on-surface font-body-md overflow-x-hidden relative min-h-screen">
+        {/* Interactive Spotlight Glow */}
+        <div 
+          className="pointer-events-none fixed inset-0 z-50 transition-opacity duration-300 mix-blend-screen"
+          style={{
+            background: `radial-gradient(400px circle at ${cursorPos.x}px ${cursorPos.y}px, rgba(255, 71, 155, 0.25) 0%, rgba(255, 71, 155, 0.12) 25%, rgba(255, 71, 155, 0.05) 50%, transparent 80%)`
+          }}
+        ></div>
+
+        {/* Background Gradient Image */}
+        <div 
+          className="fixed inset-0 z-[-1] opacity-30 bg-cover bg-center pointer-events-none mix-blend-screen"
+          style={{ backgroundImage: `url(${bgImage})` }}
+        ></div>
+
         {/* Custom Cursor */}
         <div 
           className="custom-cursor hidden md:block" 
