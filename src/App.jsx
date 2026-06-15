@@ -57,9 +57,9 @@ export default function App() {
       <div className="dark bg-background text-on-surface font-body-md overflow-x-hidden relative min-h-screen">
         {/* Interactive Spotlight Glow */}
         <div 
-          className="pointer-events-none fixed inset-0 z-50 transition-opacity duration-300 mix-blend-screen"
+          className="pointer-events-none fixed inset-0 z-50 transition-opacity duration-300"
           style={{
-            background: `radial-gradient(400px circle at ${cursorPos.x}px ${cursorPos.y}px, rgba(255, 71, 155, 0.25) 0%, rgba(255, 71, 155, 0.12) 25%, rgba(255, 71, 155, 0.05) 50%, transparent 80%)`
+            background: `radial-gradient(400px circle at ${cursorPos.x}px ${cursorPos.y}px, rgba(255, 71, 155, 0.15) 0%, rgba(255, 71, 155, 0.08) 25%, rgba(255, 71, 155, 0.02) 50%, transparent 80%)`
           }}
         ></div>
 

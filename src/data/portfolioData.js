@@ -72,12 +72,15 @@ export const portfolioData = {
     },    
   ],
   skills: [
-    { icon: "code", name: "JavaScript / PHP" },
-    { icon: "terminal", name: "Python / C++" },
-    { icon: "desktop_windows", name: "WordPress / Elementor" },
-    { icon: "smartphone", name: "React Native" },
-    { icon: "database", name: "MySQL" },
-    { icon: "cloud_queue", name: "Cloudflare / Git" }
+    { icon: "html", name: "HTML / CSS", description: "Front-end Development" },
+    { icon: "javascript", name: "JavaScript / PHP", description: "Back-end Development" },
+    { icon: "terminal", name: "Python / C++", description: "Programming Language" },
+    { icon: "smartphone", name: "React Native", description: "Mobile Development" },
+    { icon: "database", name: "MySQL", description: "Database Management" },
+    { icon: "desktop_windows", name: "WordPress / Elementor", description: "CMS & Web Builder" },
+    { icon: "account_tree", name: "Git / GitHub", description: "Version Control" },
+    { icon: "draw", name: "Figma", description: "UI/UX Design & Prototyping" },
+    { icon: "palette", name: "Adobe Creative Suite", description: "Design & Creative Tools" }
   ],
   services: [
     {
