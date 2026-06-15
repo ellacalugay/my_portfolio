@@ -8,7 +8,7 @@ function SkillCard({ skill }) {
     <div
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="relative group w-full rounded-2xl transition-all duration-500 cursor-default"
+      className="relative group w-full aspect-[2/1] rounded-2xl transition-all duration-500 cursor-default"
       style={{
         transform: isHovered ? 'translateY(-6px) scale(1.02)' : 'translateY(0) scale(1)',
       }}
@@ -21,20 +21,20 @@ function SkillCard({ skill }) {
       ></div>
 
       {/* Actual Glassmorphism Card */}
-      <div className="relative h-full w-full bg-[#0a0a0a]/60 backdrop-blur-xl border border-white/10 rounded-2xl p-8 flex flex-col items-start gap-6 overflow-hidden transition-all duration-500 hover:border-[#ff479b]/50 shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
+      <div className="relative h-full w-full bg-[#0a0a0a]/60 backdrop-blur-xl border border-white/10 rounded-2xl p-4 lg:p-5 flex flex-col items-start gap-3 overflow-hidden transition-all duration-500 hover:border-[#ff479b]/50 shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
         
         {/* Soft Pink Ambient Glow inside card */}
         <div 
-          className="absolute -top-10 -right-10 w-40 h-40 bg-[#ff479b]/10 rounded-full blur-[50px] pointer-events-none transition-all duration-500"
+          className="absolute -top-8 -right-8 w-32 h-32 bg-[#ff479b]/10 rounded-full blur-[40px] pointer-events-none transition-all duration-500"
           style={{ opacity: isHovered ? 1 : 0.3 }}
         />
 
         {/* Icon Container */}
-        <div className={`p-4 rounded-xl border transition-all duration-500 flex items-center justify-center ${
+        <div className={`p-2.5 rounded-xl border transition-all duration-500 flex items-center justify-center ${
           isHovered ? 'border-[#ff479b]/80 bg-[#ff479b]/10 shadow-[0_0_20px_rgba(255,71,155,0.3)]' : 'border-white/10 bg-white/5'
         }`}>
           <span 
-            className="material-symbols-outlined text-[40px] transition-colors duration-500"
+            className="material-symbols-outlined text-[24px] transition-colors duration-500"
             style={{ 
               fontVariationSettings: "'FILL' 1",
               color: isHovered ? '#FFD6E8' : '#ff479b',
@@ -47,10 +47,10 @@ function SkillCard({ skill }) {
         
         {/* Text Content */}
         <div className="flex flex-col gap-1 z-10">
-          <h4 className="font-headline-md text-[20px] md:text-[22px] text-white font-medium tracking-wide">
+          <h4 className="font-headline-md text-[15px] md:text-[16px] text-white font-medium tracking-wide">
             {skill.name}
           </h4>
-          <p className="font-body-md text-[#a1a1aa] text-[14px] leading-relaxed transition-colors duration-500 group-hover:text-[#d1d5db]">
+          <p className="font-body-md text-[#a1a1aa] text-[12px] leading-relaxed transition-colors duration-500 group-hover:text-[#d1d5db]">
             {skill.description}
           </p>
         </div>
@@ -63,7 +63,7 @@ export default function Skills() {
   const skills = portfolioData.skills;
 
   return (
-    <section className="relative py-32 px-margin-mobile md:px-margin-desktop overflow-hidden bg-[#050505]">
+    <section className="relative py-16 px-margin-mobile md:px-margin-desktop overflow-hidden bg-[#050505]">
       
       {/* Background Effects */}
       <div className="absolute inset-0 pointer-events-none z-0">
@@ -86,25 +86,25 @@ export default function Skills() {
         ></div>
       </div>
 
-      <div className="relative z-10 max-w-container-max mx-auto text-center mb-24">
+      <div className="relative z-10 max-w-[960px] mx-auto text-center mb-10">
         {/* Small uppercase label */}
-        <h2 className="inline-block font-label-caps text-[13px] text-[#ff479b] mb-6 tracking-[0.3em] uppercase font-semibold px-4 py-1.5 rounded-full border border-[#ff479b]/30 bg-[#ff479b]/5 shadow-[0_0_15px_rgba(255,71,155,0.2)]">
+        <h2 className="inline-block font-label-caps text-[10px] text-[#ff479b] mb-3 tracking-[0.3em] uppercase font-semibold px-3 py-1 rounded-full border border-[#ff479b]/30 bg-[#ff479b]/5 shadow-[0_0_15px_rgba(255,71,155,0.2)]">
           TECHNICAL STACK
         </h2>
         
         {/* Main Heading */}
-        <h3 className="font-headline-md text-5xl md:text-6xl lg:text-7xl text-white font-bold mb-6 tracking-tight">
+        <h3 className="font-headline-md text-3xl md:text-4xl lg:text-5xl text-white font-bold mb-3 tracking-tight">
           Precision <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff479b] to-[#FFD6E8]">Tools.</span>
         </h3>
 
         {/* Professional Subtitle */}
-        <p className="font-body-lg text-lg md:text-xl text-[#a1a1aa] max-w-2xl mx-auto font-light">
+        <p className="font-body-lg text-sm md:text-base text-[#a1a1aa] max-w-2xl mx-auto font-light">
           The technologies and tools I use to bring ideas to life.
         </p>
       </div>
 
       {/* Responsive Grid Layout */}
-      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 max-w-[960px] mx-auto">
         {skills.map((skill, index) => (
           <SkillCard key={index} skill={skill} />
         ))}
