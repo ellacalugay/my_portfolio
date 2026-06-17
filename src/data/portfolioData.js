@@ -127,6 +127,7 @@ export const portfolioData = {
     { icon: "smartphone", name: "React Native", description: "Mobile Development" },
     { icon: "database", name: "MySQL", description: "Database Management" },
     { icon: "desktop_windows", name: "WordPress / Elementor", description: "CMS & Web Builder" },
+    { icon: "storefront", name: "Shopify", description: "E-commerce" },
     { icon: "account_tree", name: "Git / GitHub", description: "Version Control" },
     { icon: "draw", name: "Figma", description: "UI/UX Design & Prototyping" },
     { icon: "palette", name: "Adobe Creative Suite", description: "Design & Creative Tools" }

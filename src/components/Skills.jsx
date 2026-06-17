@@ -1,56 +1,34 @@
-import { useState } from 'react';
 import { portfolioData } from '../data/portfolioData';
 
 function SkillCard({ skill }) {
-  const [isHovered, setIsHovered] = useState(false);
-
   return (
-    <div
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      className="relative group w-full aspect-[2/1] rounded-2xl transition-all duration-500 cursor-default"
-      style={{
-        transform: isHovered ? 'translateY(-6px) scale(1.02)' : 'translateY(0) scale(1)',
-      }}
-    >
-      {/* Outer Glowing Border Effect */}
-      <div 
-        className={`absolute inset-0 rounded-2xl transition-all duration-500 blur-[4px] -z-10 ${
-          isHovered ? 'bg-gradient-to-br from-[#ff479b] to-[#FFD6E8] opacity-50' : 'bg-[#ff479b] opacity-0'
-        }`}
-      ></div>
-
-      {/* Actual Glassmorphism Card */}
-      <div className="relative h-full w-full bg-[#0a0a0a]/60 backdrop-blur-xl border border-white/10 rounded-2xl p-4 lg:p-5 flex flex-col items-start gap-3 overflow-hidden transition-all duration-500 hover:border-[#ff479b]/50 shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
+    <div className="group relative flex flex-col h-full w-full transition-all duration-500 ease-out hover:-translate-y-2 hover:scale-[1.02] cursor-default">
+      
+      {/* Enhanced outer glow on hover */}
+      <div className="absolute inset-0 rounded-[24px] bg-gradient-to-br from-[#ff479b]/30 to-[#FFD6E8]/10 blur-[12px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
+      
+      {/* Main Glassmorphism Card */}
+      <div className="relative flex flex-col h-full w-full bg-white/[0.03] backdrop-blur-xl border border-[#ff479b]/20 rounded-[24px] p-6 lg:p-8 gap-6 overflow-hidden transition-all duration-500 group-hover:border-[#ff479b]/50 group-hover:bg-white/[0.05] group-hover:shadow-[0_15px_40px_-10px_rgba(255,71,155,0.3)] shadow-[0_8px_30px_rgba(0,0,0,0.5)]">
         
-        {/* Soft Pink Ambient Glow inside card */}
-        <div 
-          className="absolute -top-8 -right-8 w-32 h-32 bg-[#ff479b]/10 rounded-full blur-[40px] pointer-events-none transition-all duration-500"
-          style={{ opacity: isHovered ? 1 : 0.3 }}
-        />
+        {/* Internal ambient light */}
+        <div className="absolute -top-16 -right-16 w-40 h-40 bg-[#ff479b]/10 rounded-full blur-[40px] pointer-events-none transition-opacity duration-500 group-hover:opacity-100 opacity-40" />
 
         {/* Icon Container */}
-        <div className={`p-2.5 rounded-xl border transition-all duration-500 flex items-center justify-center ${
-          isHovered ? 'border-[#ff479b]/80 bg-[#ff479b]/10 shadow-[0_0_20px_rgba(255,71,155,0.3)]' : 'border-white/10 bg-white/5'
-        }`}>
+        <div className="w-[72px] h-[72px] rounded-[20px] border border-[#ff479b]/30 bg-[#ff479b]/10 flex items-center justify-center transition-all duration-500 group-hover:border-[#ff479b]/80 group-hover:bg-[#ff479b]/20 group-hover:shadow-[0_0_25px_rgba(255,71,155,0.4)]">
           <span 
-            className="material-symbols-outlined text-[24px] transition-colors duration-500"
-            style={{ 
-              fontVariationSettings: "'FILL' 1",
-              color: isHovered ? '#FFD6E8' : '#ff479b',
-              textShadow: isHovered ? '0 0 20px rgba(255, 71, 155, 0.6)' : 'none'
-            }}
+            className="material-symbols-outlined text-[36px] text-[#ff479b] transition-all duration-500 group-hover:text-[#FFD6E8] group-hover:drop-shadow-[0_0_15px_rgba(255,71,155,0.8)]"
+            style={{ fontVariationSettings: "'FILL' 1" }}
           >
             {skill.icon}
           </span>
         </div>
         
         {/* Text Content */}
-        <div className="flex flex-col gap-1 z-10">
-          <h4 className="font-headline-md text-[15px] md:text-[16px] text-white font-medium tracking-wide">
+        <div className="flex flex-col gap-3 z-10 mt-auto">
+          <h4 className="font-headline-md text-xl md:text-2xl text-white font-medium tracking-wide">
             {skill.name}
           </h4>
-          <p className="font-body-md text-[#a1a1aa] text-[12px] leading-relaxed transition-colors duration-500 group-hover:text-[#d1d5db]">
+          <p className="font-body-md text-[#a1a1aa] text-sm md:text-[15px] leading-relaxed transition-colors duration-500 group-hover:text-[#e4e4e7]">
             {skill.description}
           </p>
         </div>
@@ -103,11 +81,36 @@ export default function Skills() {
         </p>
       </div>
 
-      {/* Responsive Grid Layout */}
-      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 max-w-[960px] mx-auto">
-        {skills.map((skill, index) => (
-          <SkillCard key={index} skill={skill} />
-        ))}
+      {/* Enhanced Card Area Container with Background Effects */}
+      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 md:px-16 lg:px-24 py-10 mt-4">
+        
+        {/* Background Enhancements behind the cards ONLY */}
+        <div className="absolute inset-0 pointer-events-none -z-10 rounded-[40px] overflow-hidden">
+          {/* Subtle radial pink lighting */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(ellipse_at_center,rgba(255,71,155,0.08)_0%,transparent_60%)] blur-[50px]" />
+          
+          {/* Soft gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#ff479b]/[0.02] to-transparent" />
+          
+          {/* Very light noise texture */}
+          <div 
+            className="absolute inset-0 opacity-[0.03] mix-blend-overlay"
+            style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.8%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E")' }}
+          />
+
+          {/* Ambient glow elements for depth */}
+          <div className="absolute top-0 left-0 w-96 h-96 bg-[#ff479b]/5 rounded-full blur-[80px]" />
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#ff479b]/5 rounded-full blur-[80px]" />
+        </div>
+
+        {/* Responsive Grid Layout */}
+        <div className="flex flex-wrap justify-center gap-6 lg:gap-8">
+          {skills.map((skill, index) => (
+            <div key={index} className="w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.5rem)] flex-none">
+              <SkillCard skill={skill} />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

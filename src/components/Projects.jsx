@@ -60,37 +60,32 @@ export default function Projects() {
   };
 
   return (
-    <section className="py-stack-lg px-margin-mobile md:px-margin-desktop bg-surface-container-lowest" id="work">
-      <div className="max-w-container-max mx-auto">
-        <div className="flex justify-between items-end mb-16">
-          <div>
-            <h2 className="font-label-caps text-label-caps text-primary mb-4">
-              FEATURED PROJECTS
-            </h2>
-            <h3 className="font-display-lg-mobile md:font-display-lg text-headline-md md:text-headline-md">
-              Digital Artifacts.
-            </h3>
-          </div>
-
+    <section className="pt-16 pb-32 bg-surface-container-lowest relative w-full" id="work">
+      <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+        <div className="relative z-10 max-w-[960px] mx-auto text-center mb-20">
+          {/* Small uppercase label */}
+          <h2 className="inline-block font-label-caps text-[10px] text-[#ff479b] mb-3 tracking-[0.3em] uppercase font-semibold px-3 py-1 rounded-full border border-[#ff479b]/30 bg-[#ff479b]/5 shadow-[0_0_15px_rgba(255,71,155,0.2)]">
+            FEATURED PROJECTS
+          </h2>
+          
+          {/* Main Heading */}
+          <h3 className="font-headline-md text-3xl md:text-4xl lg:text-5xl text-white font-bold tracking-tight">
+            Digital <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff479b] to-[#FFD6E8]">Artifacts.</span>
+          </h3>
         </div>
+      </div>
 
-        <div className="relative group/carousel flex items-center">
-          {/* Side Navigation Arrows */}
-          <button 
-            onClick={() => scrollBy(-400)}
-            className="absolute left-2 md:-left-6 lg:-left-12 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-[#0a0a0a]/80 backdrop-blur border border-primary/30 text-primary hover:bg-primary/20 transition-all shadow-[0_0_15px_rgba(255,71,155,0.2)]"
-            aria-label="Previous projects"
-          >
-             <span className="material-symbols-outlined" style={{ fontSize: '24px' }}>arrow_back</span>
-          </button>
-          <button 
-            onClick={() => scrollBy(400)}
-            className="absolute right-2 md:-right-6 lg:-right-12 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-[#0a0a0a]/80 backdrop-blur border border-primary/30 text-primary hover:bg-primary/20 transition-all shadow-[0_0_15px_rgba(255,71,155,0.2)]"
-            aria-label="Next projects"
-          >
-             <span className="material-symbols-outlined" style={{ fontSize: '24px' }}>arrow_forward</span>
-          </button>
+      <div className="group/carousel relative w-full flex items-center justify-center">
+        {/* Left Navigation Arrow */}
+        <button 
+          onClick={() => scrollBy(-400)}
+          className="absolute left-2 md:left-6 lg:left-12 z-30 p-3 md:p-4 rounded-full bg-[#0a0a0a]/90 backdrop-blur border border-primary/40 text-primary hover:bg-primary/20 hover:scale-110 hover:border-primary/70 transition-all duration-300 shadow-[0_0_15px_rgba(255,71,155,0.2)] hover:shadow-[0_0_25px_rgba(255,71,155,0.4)]"
+          aria-label="Previous projects"
+        >
+           <span className="material-symbols-outlined" style={{ fontSize: '24px' }}>arrow_back</span>
+        </button>
 
+        <div className="w-full max-w-[1920px] mx-auto px-12 md:px-24 lg:px-32">
           {/* Carousel Container */}
           <div 
             ref={scrollRef}
@@ -101,7 +96,7 @@ export default function Projects() {
             onMouseMove={handleMouseMove}
             onTouchStart={() => setIsHovered(true)}
             onTouchEnd={() => setIsHovered(false)}
-            className="flex gap-gutter overflow-x-auto snap-x snap-mandatory pb-8 cursor-grab active:cursor-grabbing"
+            className="flex w-full gap-6 md:gap-8 overflow-x-auto snap-x snap-mandatory py-24 md:py-32 -my-24 md:-my-32 px-2 md:px-4 cursor-grab active:cursor-grabbing"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
             <style>{`
@@ -113,24 +108,24 @@ export default function Projects() {
             {projects.map((project, index) => (
               <div 
                 key={index}
-                className={`glass-panel group overflow-hidden relative flex-none w-[85vw] md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] snap-center ${index % 2 === 1 ? 'lg:translate-y-12' : ''}`}
+                className={`glass-panel group relative flex-none w-full md:w-[calc((100%-32px)/2)] lg:w-[calc((100%-64px)/3)] snap-center ${index % 2 === 1 ? 'md:translate-y-12' : ''}`}
               >
-                <div className="aspect-[4/3] relative">
+                <div className="aspect-[3/4] relative overflow-hidden rounded-2xl">
                   <img 
-                    className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110 opacity-60" 
+                    className="w-full h-full object-cover transition-transform duration-700 scale-125 group-hover:scale-150 opacity-60" 
                     data-alt={project.imageAlt}
                     src={project.imageUrl}
                     alt={project.title}
                     draggable="false"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent p-8 flex flex-col justify-end">
-                    <div className="font-label-caps text-[10px] text-primary mb-2 border border-primary/30 w-fit px-2">
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent p-6 md:p-8 flex flex-col justify-end">
+                    <div className="font-label-caps text-xs md:text-sm text-primary mb-3 border border-primary/30 w-fit px-3 py-1">
                       {project.tag}
                     </div>
-                    <h4 className="font-headline-md text-headline-md text-on-surface mb-2">
+                    <h4 className="font-headline-md text-4xl md:text-5xl font-bold leading-tight tracking-tight text-on-surface mb-3">
                       {project.title}
                     </h4>
-                    <p className="text-on-secondary-fixed-variant group-hover:text-on-surface transition-colors">
+                    <p className="text-lg md:text-xl text-on-secondary-fixed-variant group-hover:text-on-surface transition-colors leading-relaxed">
                       {project.description}
                     </p>
                   </div>
@@ -139,6 +134,15 @@ export default function Projects() {
             ))}
           </div>
         </div>
+
+        {/* Right Navigation Arrow */}
+        <button 
+          onClick={() => scrollBy(400)}
+          className="absolute right-2 md:right-6 lg:right-12 z-30 p-3 md:p-4 rounded-full bg-[#0a0a0a]/90 backdrop-blur border border-primary/40 text-primary hover:bg-primary/20 hover:scale-110 hover:border-primary/70 transition-all duration-300 shadow-[0_0_15px_rgba(255,71,155,0.2)] hover:shadow-[0_0_25px_rgba(255,71,155,0.4)]"
+          aria-label="Next projects"
+        >
+           <span className="material-symbols-outlined" style={{ fontSize: '24px' }}>arrow_forward</span>
+        </button>
       </div>
     </section>
   );
