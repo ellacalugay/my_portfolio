@@ -1,36 +1,89 @@
+import React, { useEffect, useRef, useState } from 'react';
 import { portfolioData } from '../data/portfolioData';
 
-function SkillCard({ skill }) {
+function SkillCard({ skill, index }) {
+  const cardRef = useRef(null);
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '50px',
+      }
+    );
+
+    if (cardRef.current) {
+      observer.observe(cardRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  const handleMouseMove = (e) => {
+    if (!cardRef.current) return;
+    const rect = cardRef.current.getBoundingClientRect();
+    setMousePos({ x: e.clientX - rect.left, y: e.clientY - rect.top });
+  };
+
   return (
-    <div className="group relative flex flex-col h-full w-full transition-all duration-500 ease-out hover:-translate-y-2 hover:scale-[1.02] cursor-default">
+    <div 
+      ref={cardRef}
+      className={`group relative flex flex-col w-full h-[150px] transition-all duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] cursor-default
+        ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}
+      `}
+      style={{ 
+        transitionDelay: `${index * 120}ms`,
+        animation: isVisible ? `float ${5 + (index % 3)}s ease-in-out infinite alternate` : 'none',
+        animationDelay: `${index * 0.15}s`
+      }}
+      onMouseMove={handleMouseMove}
+    >
       
       {/* Enhanced outer glow on hover */}
-      <div className="absolute inset-0 rounded-[24px] bg-gradient-to-br from-[#ff479b]/30 to-[#FFD6E8]/10 blur-[12px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
+      <div className="absolute inset-0 rounded-[16px] bg-gradient-to-br from-[#ff479b]/20 to-[#FFD6E8]/10 blur-[16px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out -z-10"></div>
       
       {/* Main Glassmorphism Card */}
-      <div className="relative flex flex-col h-full w-full bg-white/[0.03] backdrop-blur-xl border border-[#ff479b]/20 rounded-[24px] p-6 lg:p-8 gap-6 overflow-hidden transition-all duration-500 group-hover:border-[#ff479b]/50 group-hover:bg-white/[0.05] group-hover:shadow-[0_15px_40px_-10px_rgba(255,71,155,0.3)] shadow-[0_8px_30px_rgba(0,0,0,0.5)]">
+      <div className="relative flex flex-col h-full w-full bg-white/[0.02] backdrop-blur-xl border border-[#ff479b]/15 rounded-[16px] p-5 overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:border-[#ff479b]/40 group-hover:bg-white/[0.04] group-hover:shadow-[0_15px_40px_-10px_rgba(255,71,155,0.2)] shadow-[0_8px_30px_rgba(0,0,0,0.4)] group-hover:-translate-y-2 group-hover:scale-[1.02]">
         
-        {/* Internal ambient light */}
-        <div className="absolute -top-16 -right-16 w-40 h-40 bg-[#ff479b]/10 rounded-full blur-[40px] pointer-events-none transition-opacity duration-500 group-hover:opacity-100 opacity-40" />
+        {/* Parallax Glow Effect */}
+        <div 
+          className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 mix-blend-screen"
+          style={{
+            background: `radial-gradient(350px circle at ${mousePos.x}px ${mousePos.y}px, rgba(255,71,155,0.15), transparent 40%)`,
+          }}
+        />
 
-        {/* Icon Container */}
-        <div className="w-[72px] h-[72px] rounded-[20px] border border-[#ff479b]/30 bg-[#ff479b]/10 flex items-center justify-center transition-all duration-500 group-hover:border-[#ff479b]/80 group-hover:bg-[#ff479b]/20 group-hover:shadow-[0_0_25px_rgba(255,71,155,0.4)]">
-          <span 
-            className="material-symbols-outlined text-[36px] text-[#ff479b] transition-all duration-500 group-hover:text-[#FFD6E8] group-hover:drop-shadow-[0_0_15px_rgba(255,71,155,0.8)]"
-            style={{ fontVariationSettings: "'FILL' 1" }}
-          >
-            {skill.icon}
-          </span>
-        </div>
-        
-        {/* Text Content */}
-        <div className="flex flex-col gap-3 z-10 mt-auto">
-          <h4 className="font-headline-md text-xl md:text-2xl text-white font-medium tracking-wide">
-            {skill.name}
-          </h4>
-          <p className="font-body-md text-[#a1a1aa] text-sm md:text-[15px] leading-relaxed transition-colors duration-500 group-hover:text-[#e4e4e7]">
-            {skill.description}
-          </p>
+        {/* Internal ambient light (static fallback) */}
+        <div className="absolute -top-12 -right-12 w-28 h-28 bg-[#ff479b]/10 rounded-full blur-[30px] pointer-events-none transition-opacity duration-700 group-hover:opacity-80 opacity-30" />
+
+        <div className="flex flex-col justify-center z-10 h-full gap-3">
+          {/* Icon Container */}
+          <div className="w-[42px] h-[42px] shrink-0 rounded-[10px] border border-[#ff479b]/20 bg-[#ff479b]/10 flex items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:border-[#ff479b]/60 group-hover:bg-[#ff479b]/20 group-hover:shadow-[0_0_20px_rgba(255,71,155,0.3)]">
+            <span 
+              className="material-symbols-outlined text-[22px] text-[#ff479b] transition-all duration-700 group-hover:text-[#FFD6E8] group-hover:drop-shadow-[0_0_12px_rgba(255,71,155,0.6)]"
+              style={{ fontVariationSettings: "'FILL' 1" }}
+            >
+              {skill.icon}
+            </span>
+          </div>
+          
+          {/* Text Content */}
+          <div className="flex flex-col gap-1">
+            <h4 className="font-headline-md text-[15px] md:text-[16px] text-white font-medium tracking-wide leading-none">
+              {skill.name}
+            </h4>
+            <p className="font-body-md text-[#a1a1aa] text-[12px] md:text-[13px] leading-snug transition-colors duration-700 group-hover:text-[#e4e4e7] line-clamp-2">
+              {skill.description}
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -43,6 +96,17 @@ export default function Skills() {
   return (
     <section className="relative py-16 px-margin-mobile md:px-margin-desktop overflow-hidden bg-[#050505]">
       
+      {/* Inject custom animations */}
+      <style>
+        {`
+          @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0px); }
+          }
+        `}
+      </style>
+
       {/* Background Effects */}
       <div className="absolute inset-0 pointer-events-none z-0">
         {/* Radial Pink Lighting */}
@@ -103,11 +167,11 @@ export default function Skills() {
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#ff479b]/5 rounded-full blur-[80px]" />
         </div>
 
-        {/* Responsive Grid Layout */}
-        <div className="flex flex-wrap justify-center gap-6 lg:gap-8">
+        {/* Responsive Flex Layout */}
+        <div className="flex flex-wrap justify-center gap-4 md:gap-6 lg:gap-6">
           {skills.map((skill, index) => (
-            <div key={index} className="w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.5rem)] flex-none">
-              <SkillCard skill={skill} />
+            <div key={index} className="w-full sm:w-[calc(50%-0.5rem)] md:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)] flex-none">
+              <SkillCard skill={skill} index={index} />
             </div>
           ))}
         </div>
