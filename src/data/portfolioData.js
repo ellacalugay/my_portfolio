@@ -24,7 +24,7 @@ export const portfolioData = {
     ],
     stats: [
       { number: "1", label: "Year Dev Experience" },
-      { number: "10+", label: "Projects Delivered" }
+      { number: "15+", label: "Projects Delivered" }
     ]
   },
   experience: [
