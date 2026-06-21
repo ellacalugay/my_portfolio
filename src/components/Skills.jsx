@@ -48,27 +48,27 @@ function SkillCard({ skill, index }) {
     >
       
       {/* Enhanced outer glow on hover */}
-      <div className="absolute inset-0 rounded-[16px] bg-gradient-to-br from-[#ff479b]/20 to-[#FFD6E8]/10 blur-[16px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out -z-10"></div>
+      <div className="absolute inset-0 rounded-[16px] bg-gradient-to-br from-primary/20 to-primary-container/10 blur-[16px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out -z-10"></div>
       
       {/* Main Glassmorphism Card */}
-      <div className="relative flex flex-col h-full w-full bg-white/[0.02] backdrop-blur-xl border border-[#ff479b]/15 rounded-[16px] p-5 overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:border-[#ff479b]/40 group-hover:bg-white/[0.04] group-hover:shadow-[0_15px_40px_-10px_rgba(255,71,155,0.2)] shadow-[0_8px_30px_rgba(0,0,0,0.4)] group-hover:-translate-y-2 group-hover:scale-[1.02]">
+      <div className="relative flex flex-col h-full w-full bg-white/[0.02] backdrop-blur-xl border border-primary/15 rounded-[16px] p-5 overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:border-primary/40 group-hover:bg-white/[0.04] group-hover:shadow-[0_15px_40px_-10px_rgba(244,166,193,0.2)] shadow-[0_8px_30px_rgba(0,0,0,0.4)] group-hover:-translate-y-2 group-hover:scale-[1.02]">
         
         {/* Parallax Glow Effect */}
         <div 
           className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 mix-blend-screen"
           style={{
-            background: `radial-gradient(350px circle at ${mousePos.x}px ${mousePos.y}px, rgba(255,71,155,0.15), transparent 40%)`,
+            background: `radial-gradient(350px circle at ${mousePos.x}px ${mousePos.y}px, rgba(244,166,193,0.15), transparent 40%)`,
           }}
         />
 
         {/* Internal ambient light (static fallback) */}
-        <div className="absolute -top-12 -right-12 w-28 h-28 bg-[#ff479b]/10 rounded-full blur-[30px] pointer-events-none transition-opacity duration-700 group-hover:opacity-80 opacity-30" />
+        <div className="absolute -top-12 -right-12 w-28 h-28 bg-primary/10 rounded-full blur-[30px] pointer-events-none transition-opacity duration-700 group-hover:opacity-80 opacity-30" />
 
         <div className="flex flex-col justify-center z-10 h-full gap-3">
           {/* Icon Container */}
-          <div className="w-[42px] h-[42px] shrink-0 rounded-[10px] border border-[#ff479b]/20 bg-[#ff479b]/10 flex items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:border-[#ff479b]/60 group-hover:bg-[#ff479b]/20 group-hover:shadow-[0_0_20px_rgba(255,71,155,0.3)]">
+          <div className="w-[42px] h-[42px] shrink-0 rounded-[10px] border border-primary/20 bg-primary/10 flex items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:border-primary/60 group-hover:bg-primary/20 group-hover:shadow-[0_0_20px_rgba(244,166,193,0.3)]">
             <span 
-              className="material-symbols-outlined text-[22px] text-[#ff479b] transition-all duration-700 group-hover:text-[#FFD6E8] group-hover:drop-shadow-[0_0_12px_rgba(255,71,155,0.6)]"
+              className="material-symbols-outlined text-[22px] text-primary transition-all duration-700 group-hover:text-primary-container group-hover:drop-shadow-[0_0_12px_rgba(244,166,193,0.6)]"
               style={{ fontVariationSettings: "'FILL' 1" }}
             >
               {skill.icon}
@@ -94,7 +94,7 @@ export default function Skills() {
   const skills = portfolioData.skills;
 
   return (
-    <section className="relative py-16 px-margin-mobile md:px-margin-desktop overflow-hidden bg-[#050505]">
+    <section className="relative py-16 px-margin-mobile md:px-margin-desktop overflow-hidden bg-background">
       
       {/* Inject custom animations */}
       <style>
@@ -110,7 +110,7 @@ export default function Skills() {
       {/* Background Effects */}
       <div className="absolute inset-0 pointer-events-none z-0">
         {/* Radial Pink Lighting */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-[radial-gradient(ellipse_at_center,rgba(255,71,155,0.08)_0%,transparent_70%)] blur-[80px]"></div>
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-[radial-gradient(ellipse_at_center,rgba(244,166,193,0.08)_0%,transparent_70%)] blur-[80px]"></div>
         
         {/* Noise Texture */}
         <div 
@@ -130,13 +130,13 @@ export default function Skills() {
 
       <div className="relative z-10 max-w-[960px] mx-auto text-center mb-10">
         {/* Small uppercase label */}
-        <h2 className="inline-block font-label-caps text-[10px] text-[#ff479b] mb-3 tracking-[0.3em] uppercase font-semibold px-3 py-1 rounded-full border border-[#ff479b]/30 bg-[#ff479b]/5 shadow-[0_0_15px_rgba(255,71,155,0.2)]">
+        <h2 className="inline-block font-label-caps text-[10px] text-primary mb-3 tracking-[0.3em] uppercase font-semibold px-3 py-1 rounded-full border border-primary/30 bg-primary/5 shadow-[0_0_15px_rgba(244,166,193,0.2)]">
           TECHNICAL STACK
         </h2>
         
         {/* Main Heading */}
         <h3 className="font-headline-md text-3xl md:text-4xl lg:text-5xl text-white font-bold mb-3 tracking-tight">
-          Precision <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff479b] to-[#FFD6E8]">Tools.</span>
+          Precision <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-container">Tools.</span>
         </h3>
 
         {/* Professional Subtitle */}
@@ -151,10 +151,10 @@ export default function Skills() {
         {/* Background Enhancements behind the cards ONLY */}
         <div className="absolute inset-0 pointer-events-none -z-10 rounded-[40px] overflow-hidden">
           {/* Subtle radial pink lighting */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(ellipse_at_center,rgba(255,71,155,0.08)_0%,transparent_60%)] blur-[50px]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(ellipse_at_center,rgba(244,166,193,0.08)_0%,transparent_60%)] blur-[50px]" />
           
           {/* Soft gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#ff479b]/[0.02] to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/[0.02] to-transparent" />
           
           {/* Very light noise texture */}
           <div 
@@ -163,8 +163,8 @@ export default function Skills() {
           />
 
           {/* Ambient glow elements for depth */}
-          <div className="absolute top-0 left-0 w-96 h-96 bg-[#ff479b]/5 rounded-full blur-[80px]" />
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#ff479b]/5 rounded-full blur-[80px]" />
+          <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-[80px]" />
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-[80px]" />
         </div>
 
         {/* Responsive Flex Layout */}

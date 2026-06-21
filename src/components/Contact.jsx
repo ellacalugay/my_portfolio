@@ -26,7 +26,7 @@ export default function Contact() {
   };
 
   return (
-    <section className="py-stack-lg px-margin-mobile md:px-margin-desktop" id="contact">
+    <section className="pt-stack-lg pb-16 px-margin-mobile md:px-margin-desktop bg-surface" id="contact">
       <div className="max-w-container-max mx-auto">
         <div className="grid md:grid-cols-2 gap-stack-md">
           {/* Contact Info */}

@@ -4,7 +4,7 @@ export default function Experience() {
   const experiences = portfolioData.experience;
 
   return (
-    <section className="py-stack-lg px-margin-mobile md:px-margin-desktop" id="experience">
+    <section className="py-stack-lg px-margin-mobile md:px-margin-desktop bg-surface-container-low" id="experience">
       <div className="max-w-container-max mx-auto">
         <h2 className="font-label-caps text-label-caps text-primary mb-16 text-center">
           EXPERIENCE JOURNEY
@@ -21,7 +21,7 @@ export default function Experience() {
               className={`relative mb-24 md:mb-32 ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}
             >
               {/* Timeline Dot */}
-              <div className="absolute left-0 md:left-1/2 w-4 h-4 bg-primary rounded-full -translate-x-1/2 shadow-[0_0_15px_#ff479b] z-10"></div>
+              <div className="absolute left-0 md:left-1/2 w-4 h-4 bg-primary rounded-full -translate-x-1/2 shadow-[0_0_15px_rgba(244,166,193,0.5)] z-10"></div>
 
               {/* Content */}
               <div className={`ml-8 md:ml-0 ${index % 2 === 0 ? 'md:w-1/2 md:pr-16 md:text-right' : 'md:w-1/2 md:pl-16 md:ml-auto'}`}>

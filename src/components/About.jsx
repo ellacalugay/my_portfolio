@@ -4,7 +4,7 @@ export default function About() {
   const { sectionLabel, title, paragraphs, stats } = portfolioData.about;
 
   return (
-    <section className="py-stack-lg px-margin-mobile md:px-margin-desktop bg-surface-container-lowest/50" id="expertise">
+    <section className="py-stack-lg px-margin-mobile md:px-margin-desktop bg-surface" id="expertise">
       <div className="max-w-container-max mx-auto">
         <div className="grid md:grid-cols-12 gap-gutter">
           {/* Left Column */}
