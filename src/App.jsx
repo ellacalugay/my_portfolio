@@ -59,7 +59,7 @@ export default function App() {
         <div 
           className="pointer-events-none fixed inset-0 z-50 transition-opacity duration-300"
           style={{
-            background: `radial-gradient(400px circle at ${cursorPos.x}px ${cursorPos.y}px, rgba(255, 71, 155, 0.15) 0%, rgba(255, 71, 155, 0.08) 25%, rgba(255, 71, 155, 0.02) 50%, transparent 80%)`
+            background: `radial-gradient(400px circle at ${cursorPos.x}px ${cursorPos.y}px, rgba(244, 166, 193, 0.15) 0%, rgba(244, 166, 193, 0.08) 25%, rgba(244, 166, 193, 0.02) 50%, transparent 80%)`
           }}
         ></div>
 
