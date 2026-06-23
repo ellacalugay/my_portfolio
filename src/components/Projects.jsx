@@ -70,7 +70,7 @@ export default function Projects() {
           
           {/* Main Heading */}
           <h3 className="font-headline-md text-3xl md:text-4xl lg:text-5xl text-white font-bold tracking-tight">
-            Digital <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-container">Artifacts.</span>
+            Digital <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-container">Artifacts</span>
           </h3>
         </div>
       </div>

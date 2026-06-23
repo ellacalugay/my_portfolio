@@ -136,7 +136,7 @@ export default function Skills() {
         
         {/* Main Heading */}
         <h3 className="font-headline-md text-3xl md:text-4xl lg:text-5xl text-white font-bold mb-3 tracking-tight">
-          Precision <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-container">Tools.</span>
+          Precision <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-container">Tools</span>
         </h3>
 
         {/* Professional Subtitle */}
