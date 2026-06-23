@@ -46,77 +46,77 @@ export const portfolioData = {
       tag: "WEB DEVELOPER",
       title: "HikeSafe (2026)",
       description: "Developed a safety-focused application with resources and guides.",
-      imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuD1Z2t2_5vLPGCw7dyS4qdkGs1fXVDZjiB8JnNScToWZHLnAQGOQ5sal7zCb6JFANb3jftLJ0_fELys5onSaHlHG3ztZDvpItmZ8xU73WLcWjt9R3IS879Np8YPXS38OCz81h4l8M-d8caZ7NBhnvi9pUPclOOprl8NR3-i4Vue0d3QUZj9ohporYl9XlmJRofQqnWgQRlKUmdTb_-roArmdZo5yoYDnm3ADCpEOXM3scpsLdzsqZLtTFKbQ60tGjUgh_QcxR63_I4",
+      imageUrl: "https://i.imgur.com/Wjus3ev.png",
       imageAlt: "HikeSafe project screenshot"
     },
     {
       tag: "WEB DEVELOPER",
       title: "GoEquip (2026)",
       description: "Built website for equipment rental services.",
-      imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuBWp-L0tlWd3tCfx0gMZqvXfiBcuHjwRh7yhOo05EX2GYa0JEegaURNU3KkUPbmKJylGB1kpnVGtFzeztV2k45fdD1N-6VyZSihxFVe-OK1JBgl9ccUoCpXIj_eE_HiNOxljYpeT83ZtQvE4p_WKveCaKuLD53IfD2rRzYJtyKCWPpoAf6q5vloQ9QuZSAbmNb14uJbjdbl6ExfLsuAM-uAPohDJnb3dJubekwcdlyHnnd_vQhrpAGt5osjae9pOk_1DdAuJn5tbSM",
+      imageUrl: "https://i.imgur.com/6S0AQSz.png",
       imageAlt: "GoEquip project screenshot"
     },
     {
       tag: "WEB DEVELOPER",
       title: "BuildCredit (2026)",
       description: "Designed and implemented finance platform website.", 
-      imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuAUWb3MNCNuMAjxDi1DD7fCfLzpXGrcP1USbjX8fzIFQ9UtFdHOXSXP6oNfRqu6LGIrCqqtAFjoSvBFlejRj48e0dswsFRvZtNXE-lWr9g_z0sY-4EOK9nBAwTtPtaEmOnuUkqzikiTt-0EWXctjLFk-mFNri5ogqdRxHD3UimBg70SavfFaPzVQe3RT68Xe-jCLzzfXfXHWqlz8EW34817l7B0xORNVw8X6kamYdI3rrcUoS0HmSTDyBMFynBndozqDj3wpxztjtf0",
+      imageUrl: "https://i.imgur.com/UAC3f1l.png",
       imageAlt: "BuildCredit project screenshot"
     },
     {
       tag: "WEB DEVELOPER",
       title: "8Box Website (2026)",
       description: "Developed company website for IT solutions.",
-      imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuD1Z2t2_5vLPGCw7dyS4qdkGs1fXVDZjiB8JnNScToWZHLnAQGOQ5sal7zCb6JFANb3jftLJ0_fELys5onSaHlHG3ztZDvpItmZ8xU73WLcWjt9R3IS879Np8YPXS38OCz81h4l8M-d8caZ7NBhnvi9pUPclOOprl8NR3-i4Vue0d3QUZj9ohporYl9XlmJRofQqnWgQRlKUmdTb_-roArmdZo5yoYDnm3ADCpEOXM3scpsLdzsqZLtTFKbQ60tGjUgh_QcxR63_I4",
+      imageUrl: "https://i.imgur.com/uYAlLNL.png",
       imageAlt: "8Box Website project screenshot"
     },
     {
       tag: "WEB DEVELOPER",
       title: "JCI World Congress (2026)",
       description: "Built the official event website for the global leadership congress.",
-      imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuBWp-L0tlWd3tCfx0gMZqvXfiBcuHjwRh7yhOo05EX2GYa0JEegaURNU3KkUPbmKJylGB1kpnVGtFzeztV2k45fdD1N-6VyZSihxFVe-OK1JBgl9ccUoCpXIj_eE_HiNOxljYpeT83ZtQvE4p_WKveCaKuLD53IfD2rRzYJtyKCWPpoAf6q5vloQ9QuZSAbmNb14uJbjdbl6ExfLsuAM-uAPohDJnb3dJubekwcdlyHnnd_vQhrpAGt5osjae9pOk_1DdAuJn5tbSM",
+      imageUrl: "https://i.imgur.com/VECbp29.png",
       imageAlt: "JCI World Congress project screenshot"
     },
     {
       tag: "WEB DEVELOPER",
       title: "JCI Manila Org (2026)",
       description: "Created website and interactive content for JCI Manila Organizations.",
-      imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuAUWb3MNCNuMAjxDi1DD7fCfLzpXGrcP1USbjX8fzIFQ9UtFdHOXSXP6oNfRqu6LGIrCqqtAFjoSvBFlejRj48e0dswsFRvZtNXE-lWr9g_z0sY-4EOK9nBAwTtPtaEmOnuUkqzikiTt-0EWXctjLFk-mFNri5ogqdRxHD3UimBg70SavfFaPzVQe3RT68Xe-jCLzzfXfXHWqlz8EW34817l7B0xORNVw8X6kamYdI3rrcUoS0HmSTDyBMFynBndozqDj3wpxztjtf0",
+      imageUrl: "https://i.imgur.com/rglb8eM.png",
       imageAlt: "JCI Manila Org project screenshot"
     },
     {
       tag: "WEB DEVELOPER",
       title: "P3KCARS (2025)",
       description: "Built website for premium pre-owned cars marketplace (used cars & financing features).",
-      imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuD1Z2t2_5vLPGCw7dyS4qdkGs1fXVDZjiB8JnNScToWZHLnAQGOQ5sal7zCb6JFANb3jftLJ0_fELys5onSaHlHG3ztZDvpItmZ8xU73WLcWjt9R3IS879Np8YPXS38OCz81h4l8M-d8caZ7NBhnvi9pUPclOOprl8NR3-i4Vue0d3QUZj9ohporYl9XlmJRofQqnWgQRlKUmdTb_-roArmdZo5yoYDnm3ADCpEOXM3scpsLdzsqZLtTFKbQ60tGjUgh_QcxR63_I4",
+      imageUrl: "https://i.imgur.com/OcE4dUz.png",
       imageAlt: "P3KCARS project screenshot"
     },
     {
       tag: "WEB DEVELOPER",
       title: "IIA (2025)",
       description: "Built membership and resources portal for The Institute of Internal Auditors Philippines.",
-      imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuBWp-L0tlWd3tCfx0gMZqvXfiBcuHjwRh7yhOo05EX2GYa0JEegaURNU3KkUPbmKJylGB1kpnVGtFzeztV2k45fdD1N-6VyZSihxFVe-OK1JBgl9ccUoCpXIj_eE_HiNOxljYpeT83ZtQvE4p_WKveCaKuLD53IfD2rRzYJtyKCWPpoAf6q5vloQ9QuZSAbmNb14uJbjdbl6ExfLsuAM-uAPohDJnb3dJubekwcdlyHnnd_vQhrpAGt5osjae9pOk_1DdAuJn5tbSM",
+      imageUrl: "https://i.imgur.com/iLroIo6.png",
       imageAlt: "IIA project screenshot"
     },
     {
       tag: "WEB DEVELOPER",
       title: "Angelicious Website (2025)",
       description: "Designed and implemented website for a food business.",
-      imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuAUWb3MNCNuMAjxDi1DD7fCfLzpXGrcP1USbjX8fzIFQ9UtFdHOXSXP6oNfRqu6LGIrCqqtAFjoSvBFlejRj48e0dswsFRvZtNXE-lWr9g_z0sY-4EOK9nBAwTtPtaEmOnuUkqzikiTt-0EWXctjLFk-mFNri5ogqdRxHD3UimBg70SavfFaPzVQe3RT68Xe-jCLzzfXfXHWqlz8EW34817l7B0xORNVw8X6kamYdI3rrcUoS0HmSTDyBMFynBndozqDj3wpxztjtf0",
+      imageUrl: "https://i.imgur.com/jq0XNub.png",
       imageAlt: "Angelicious Website project screenshot"
     },
     {
       tag: "WEB DEVELOPER",
       title: "Patient Information and Management System (2025)",
       description: "Built for Philippine Tuberculosis Society, Inc.",
-      imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuD1Z2t2_5vLPGCw7dyS4qdkGs1fXVDZjiB8JnNScToWZHLnAQGOQ5sal7zCb6JFANb3jftLJ0_fELys5onSaHlHG3ztZDvpItmZ8xU73WLcWjt9R3IS879Np8YPXS38OCz81h4l8M-d8caZ7NBhnvi9pUPclOOprl8NR3-i4Vue0d3QUZj9ohporYl9XlmJRofQqnWgQRlKUmdTb_-roArmdZo5yoYDnm3ADCpEOXM3scpsLdzsqZLtTFKbQ60tGjUgh_QcxR63_I4",
+      imageUrl: "https://i.imgur.com/vRrSM1e.png",
       imageAlt: "Patient Information and Management System project screenshot"
     },
     {
       tag: "WEB DEVELOPER",
-      title: "COVID-19 Contact Tracing App (2022)",
+      title: "COVID-19 Contact Tracing App",
       description: "Developed tracing system for monitoring contacts and health tracking.",
-      imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuBWp-L0tlWd3tCfx0gMZqvXfiBcuHjwRh7yhOo05EX2GYa0JEegaURNU3KkUPbmKJylGB1kpnVGtFzeztV2k45fdD1N-6VyZSihxFVe-OK1JBgl9ccUoCpXIj_eE_HiNOxljYpeT83ZtQvE4p_WKveCaKuLD53IfD2rRzYJtyKCWPpoAf6q5vloQ9QuZSAbmNb14uJbjdbl6ExfLsuAM-uAPohDJnb3dJubekwcdlyHnnd_vQhrpAGt5osjae9pOk_1DdAuJn5tbSM",
+      imageUrl: "https://i.imgur.com/rglb8eM.png",
       imageAlt: "COVID-19 Contact Tracing App project screenshot"
     }
   ],
